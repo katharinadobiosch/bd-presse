@@ -1,0 +1,116 @@
+@import "../../Styling/variables.module";
+@import "../../Styling/mixins.module";
+@import "../../Styling/reset.module";
+
+.container {
+    background-color: $background-blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+}
+
+.header {
+    margin-top: 71px;
+
+    height: 276px;
+    max-width: 80vw;
+}
+
+.header :nth-child(1) {
+    font-size: 2.7rem;
+    font-weight: 600;
+    color: $font-blue;
+    padding-bottom: 2vh;
+}
+
+.header :nth-child(2) {
+    padding-bottom: 4vh;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.header :nth-child(3) {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.header :nth-child(3) a {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: black;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding-top: 41px;
+
+    width: 100vw;
+    padding-bottom: 40px;
+}
+
+// ? Media Queries
+// Based on Bootstrap breakpoints
+
+// * X-Small = Less than 576px - small mobile devices
+@include x-small {
+}
+
+// * Small = Less than 768px - mobile devices
+@include small {
+}
+
+// * Medium = Less than 992px - tablets
+@include medium {
+}
+
+// * Large = Less than 1200px - small desktops
+@include large {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        width: 810px;
+
+        padding-top: 41px;
+
+    }
+}
+
+// * Extra Large = Less than 1399px - medium desktops
+@include extra-large {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        width: 810px;
+
+        padding-top: 41px;
+    }
+}
+
+// * Extra EXTRA Large = More than 1400px - medium desktops
+@include extra-extra-large {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        width: 810px;
+
+        padding-top: 41px;
+    }
+}

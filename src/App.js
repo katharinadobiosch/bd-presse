@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// import { Link, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// All Views
+import PressOverview from "../src/Views/PressOverview/PressOverview";
+import ArticleOverview from "./Views/ArticleOverview/ArticleOverview";
+import ForAndrea from "../src/Components/ForAndrea/ForAndrea";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+
+const App = () => {
+    return (
+        <>
+            <BrowserRouter>
+                <ScrollToTop />
+
+                <Routes>
+                    <ForAndrea path="/" exact element={<ForAndrea />} />
+
+                    <Route
+                        path="/presseseite"
+                        exact
+                        element={<PressOverview />}
+                    />
+                    <Route
+                        path="/article"
+                        exact
+                        element={<ArticleOverview />}
+                    />
+
+                    <Route
+                        path="/article/:id"
+                        element={<ArticleOverview />}
+                    ></Route>
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
+};
 
 export default App;

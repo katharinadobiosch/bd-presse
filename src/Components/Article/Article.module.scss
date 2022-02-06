@@ -1,0 +1,413 @@
+@import "../../Styling/variables.module";
+@import "../../Styling/mixins.module";
+@import "../../Styling/reset.module";
+
+.article-container {
+    background-color: $background-blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+}
+
+.header {
+    width: 329px;
+    margin-top: 2.2rem;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+
+    line-height: 2.8rem;
+
+    padding-bottom: 0.4rem;
+}
+
+.date {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 150%;
+
+    color: $font-grey;
+
+    padding-bottom: 6rem;
+}
+
+.main-container {
+    width: 315px;
+}
+
+.image img {
+    height: 189px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2.2rem;
+
+    text-align: justify;
+}
+
+.content-text {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 144%;
+
+    margin-bottom: 1.5rem;
+}
+
+.social-media-container {
+    margin-top: 1.5rem;
+    color: $font-grey;
+}
+
+.sm-heading {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.1rem;
+
+    margin-top: 0.9rem;
+}
+
+.fb,
+.tw,
+.li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.8rem;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid $font-grey;
+
+    cursor: pointer;
+}
+
+.back-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    color: $font-grey;
+
+    margin-top: 4.6rem;
+    margin-bottom: 15.5rem;
+}
+
+.back-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid $font-grey;
+}
+
+.back-link {
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    color: $font-grey;
+}
+
+.prev-nxt-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    width: 315px;
+
+    margin-bottom: 7.3rem;
+}
+
+.prev-link,
+.next-link {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.header-img img {
+    height: 177px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1.4rem;
+}
+
+.card-date {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    margin-bottom: 0.9rem;
+}
+
+.headline {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 110%;
+
+    margin-bottom: 1.3rem;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+
+    height: 9rem;
+
+    margin-bottom: 1.3rem;
+}
+
+.link {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 120%;
+
+    color: $font-blue;
+}
+
+.link a {
+    color: $font-blue;
+}
+
+// ? Media Queries
+// Based on Bootstrap breakpoints
+
+// * X-Small = Less than 576px - small mobile devices
+@include x-small {
+}
+
+// * Small = Less than 768px - mobile devices
+@include small {
+}
+
+// * Medium = Less than 992px - tablets
+@include medium {
+}
+
+// * Large = Less than 1200px - small desktops
+@include large {
+    .header {
+        width: 712px;
+
+        margin-top: 2.8rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 110%;
+
+        padding-bottom: 4.2rem;
+    }
+
+    .date {
+        font-weight: 400;
+        font-size: 1.8rem;
+
+        padding-bottom: 7.3rem;
+    }
+
+    .main-container {
+        width: 712px;
+    }
+
+    .image img {
+        height: 400px;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: row-reverse;
+
+        margin-top: 4.8rem;
+    }
+
+    .social-media-container {
+        margin-top: 0rem;
+        margin-right: 6.2rem;
+    }
+
+    .icon-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+
+    .back-container {
+        margin-left: 9rem;
+    }
+
+    .prev-nxt-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 712px;
+    }
+
+    .next-link {
+        text-align: right;
+    }
+}
+
+// * Extra Large = Less than 1399px - medium desktops
+@include extra-large {
+    .header {
+        width: 712px;
+
+        margin-top: 2.8rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 110%;
+
+        padding-bottom: 4.2rem;
+    }
+
+    .date {
+        font-weight: 400;
+        font-size: 1.8rem;
+
+        padding-bottom: 7.3rem;
+    }
+
+    .main-container {
+        width: 712px;
+    }
+
+    .image img {
+        height: 400px;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: row-reverse;
+
+        margin-top: 4.8rem;
+    }
+
+    .social-media-container {
+        margin-top: 0rem;
+        margin-right: 6.2rem;
+    }
+
+    .icon-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+
+    .back-container {
+        margin-left: 9rem;
+    }
+
+    .prev-nxt-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 712px;
+    }
+
+    .next-link {
+        text-align: right;
+    }
+}
+
+// * Extra EXTRA Large = More than 1400px - medium desktops
+@include extra-extra-large {
+    .header {
+        width: 712px;
+
+        margin-top: 2.8rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 110%;
+
+        padding-bottom: 4.2rem;
+    }
+
+    .date {
+        font-weight: 400;
+        font-size: 1.8rem;
+
+        padding-bottom: 7.3rem;
+    }
+
+    .main-container {
+        width: 712px;
+    }
+
+    .image img {
+        height: 400px;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: row-reverse;
+
+        margin-top: 4.8rem;
+    }
+
+    .social-media-container {
+        margin-top: 0rem;
+        margin-right: 6.2rem;
+    }
+
+    .icon-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+
+    .back-container {
+        margin-left: 9rem;
+    }
+
+    .prev-nxt-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 712px;
+    }
+
+    .next-link {
+        text-align: right;
+    }
+}

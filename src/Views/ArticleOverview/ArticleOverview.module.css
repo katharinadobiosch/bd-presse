@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  background-color: #e7f6fd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+.header {
+  width: 329px;
+}
+
+.link-container {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 5.5rem;
+}
+
+.link {
+  color: #818181;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .header {
+    width: 712px;
+  }
+  .link-container {
+    margin-top: 7.1rem;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1399px) {
+  .header {
+    width: 712px;
+  }
+  .link-container {
+    margin-top: 7.1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header {
+    width: 712px;
+  }
+  .link-container {
+    margin-top: 7.1rem;
+  }
+}
+/*# sourceMappingURL=ArticleOverview.module.css.map */

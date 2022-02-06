@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  background-color: #e7f6fd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+.header {
+  margin-top: 71px;
+  height: 276px;
+  max-width: 80vw;
+}
+
+.header :nth-child(1) {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: #038abf;
+  padding-bottom: 2vh;
+}
+
+.header :nth-child(2) {
+  padding-bottom: 4vh;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.header :nth-child(3) {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.header :nth-child(3) a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: black;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding-top: 41px;
+  width: 100vw;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    width: 810px;
+    padding-top: 41px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1399px) {
+  .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    width: 810px;
+    padding-top: 41px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    width: 810px;
+    padding-top: 41px;
+  }
+}
+/*# sourceMappingURL=PressOverview.module.css.map */
