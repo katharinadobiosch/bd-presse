@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/bd-presse/static/css/main.073c9b0a.css",
-    "main.js": "/bd-presse/static/js/main.0c4298be.js",
+    "main.css": "/bd-presse/static/css/main.3e12defb.css",
+    "main.js": "/bd-presse/static/js/main.13049607.js",
     "static/js/787.bbc6b90f.chunk.js": "/bd-presse/static/js/787.bbc6b90f.chunk.js",
-    "static/media/logo.svg": "/bd-presse/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/bd-presse/index.html",
-    "main.073c9b0a.css.map": "/bd-presse/static/css/main.073c9b0a.css.map",
-    "main.0c4298be.js.map": "/bd-presse/static/js/main.0c4298be.js.map",
+    "main.3e12defb.css.map": "/bd-presse/static/css/main.3e12defb.css.map",
+    "main.13049607.js.map": "/bd-presse/static/js/main.13049607.js.map",
     "787.bbc6b90f.chunk.js.map": "/bd-presse/static/js/787.bbc6b90f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0c4298be.js"
+    "static/css/main.3e12defb.css",
+    "static/js/main.13049607.js"
   ]
 }
