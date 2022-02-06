@@ -302,7 +302,7 @@ const Article = () => {
                                             <div
                                                 className={styles["next-link"]}
                                             >
-                                                Previous article
+                                                Next article
                                             </div>
                                         </Link>
                                     </div>
