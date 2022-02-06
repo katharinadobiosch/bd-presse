@@ -16,7 +16,11 @@ const App = () => {
                 <ScrollToTop />
 
                 <Routes>
-                    <ForAndrea path="/" exact element={<ForAndrea />} />
+                    <ForAndrea
+                        path="/bd-presse"
+                        exact
+                        element={<ForAndrea />}
+                    />
 
                     <Route
                         path="/presseseite"

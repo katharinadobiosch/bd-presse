@@ -27,8 +27,6 @@ const Article = () => {
         <>
             <div>
                 {jsonData.map((article, index) => {
-                    console.log("hello world");
-
                     if (article.id === id) {
                         currentArticleIndex = index;
                         return (
@@ -124,9 +122,7 @@ const Article = () => {
             <div className={styles["prev-nxt-container"]}>
                 {/* // ?? Previous */}
                 <div>
-                    {jsonData.map((article, index) => {
-                        console.log("hello world");
-
+                    {jsonData.map((article, index, array) => {
                         if (
                             index === currentArticleIndex - 1 &&
                             currentArticleIndex - 1 >= 0
@@ -179,17 +175,67 @@ const Article = () => {
                                     </div>
                                 </div>
                             );
+                        } else if (
+                            currentArticleIndex === 0 &&
+                            index === array.length - 1
+                        ) {
+                            return (
+                                <div
+                                    className={styles["card-container"]}
+                                    key={article.id}
+                                >
+                                    <div>
+                                        <Link
+                                            to={`/article/${article.id}`}
+                                            alt={`Show property page for ${article.title}`}
+                                        >
+                                            <div
+                                                className={styles["prev-link"]}
+                                            >
+                                                Previous article
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <div className={styles.content}>
+                                        <div className={styles["header-img"]}>
+                                            <img
+                                                src={article.image}
+                                                alt="Forest by mali maeder from Pexels
+"
+                                            />
+                                        </div>
+                                        <div className={styles["card-date"]}>
+                                            {moment(
+                                                `${article.publish_date}`
+                                            ).format("DD.MM.YYYY")}
+                                        </div>
+                                        <div className={styles.headline}>
+                                            {article.title}
+                                        </div>
+                                        <div className={styles.text}>
+                                            {article.preview_text}
+                                        </div>
+
+                                        <div className={styles.link}>
+                                            <Link
+                                                to={`/article/${article.id}`}
+                                                alt={`Show property page for ${article.title}`}
+                                            >
+                                                <div>Artikel lesen</div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
                         }
                     })}
                 </div>
                 {/* // ?? NEXT */}
                 <div>
                     {jsonData.map((article, index, array) => {
-                        console.log("hello world");
-
                         if (
                             index === currentArticleIndex + 1 &&
-                            currentArticleIndex + 1 <= array.length
+                            currentArticleIndex + 1 >= 0
                         ) {
                             return (
                                 <div
@@ -205,6 +251,58 @@ const Article = () => {
                                                 className={styles["next-link"]}
                                             >
                                                 Next article
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <div className={styles.content}>
+                                        <div className={styles["header-img"]}>
+                                            <img
+                                                src={article.image}
+                                                alt="Forest by mali maeder from Pexels
+"
+                                            />
+                                        </div>
+                                        <div className={styles["card-date"]}>
+                                            {moment(
+                                                `${article.publish_date}`
+                                            ).format("DD.MM.YYYY")}{" "}
+                                        </div>
+                                        <div className={styles.headline}>
+                                            {article.title}
+                                        </div>
+                                        <div className={styles.text}>
+                                            {article.preview_text}
+                                        </div>
+
+                                        <div className={styles.link}>
+                                            <Link
+                                                to={`/article/${article.id}`}
+                                                alt={`Show property page for ${article.title}`}
+                                            >
+                                                <div>Artikel lesen</div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        } else if (
+                            currentArticleIndex === array.length - 1 &&
+                            index === 0
+                        ) {
+                            return (
+                                <div
+                                    className={styles["card-container"]}
+                                    key={article.id}
+                                >
+                                    <div>
+                                        <Link
+                                            to={`/article/${article.id}`}
+                                            alt={`Show property page for ${article.title}`}
+                                        >
+                                            <div
+                                                className={styles["next-link"]}
+                                            >
+                                                Previous article
                                             </div>
                                         </Link>
                                     </div>
